@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="master"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/Freescale" name="freescale"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/meta-qt5" name="qt5"/>
+  <remote fetch="https://github.com/jorisoffouga" name="jorisoffouga"/>
+  <remote fetch="https://github.com/thomaslepoix" name="thomaslepoix"/>
+  
+  <project remote="yocto" revision="sumo" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="sumo" name="meta-freescale" path="sources/meta-freescale"/>
+
+  <project remote="oe" revision="sumo" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <project remote="freescale" revision="sumo" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="sumo" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="freescale" revision="sumo" name="Documentation" path="sources/Documentation"/>
+  
+  <!-- Pico-PI iMX7D -->
+  <project remote="jorisoffouga" revision="master" name="meta-picopi-imx7d" path="sources/meta-picopi-imx7d"/>
+  <!-- Autoscope -->
+  <project remote="thomaslepoix" revision="master" name="meta-autoscope" path="sources/meta-autoscope">
+    <linkfile dest="setup-environnement" src="scripts/setup-environnement.sh"/>
+  </project>
+  <!-- Qt5 -->
+  <project remote="qt5" revision="sumo" name="meta-qt5" path="sources/meta-qt5"/>
+
+</manifest>
