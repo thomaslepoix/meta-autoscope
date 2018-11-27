@@ -140,7 +140,7 @@ if [ "$build_dir_setup_enabled" = "true" ]; then
     mv conf/local.conf conf/local.conf.sample
 
     # Generate the local.conf based on the Yocto defaults
-    TEMPLATES=$CWD/sources/base/conf 
+    TEMPLATES=$CWD/sources/meta-autoscope/scripts/conf 
     grep -v '^#\|^$' conf/local.conf.sample > conf/local.conf
     cat >> conf/local.conf <<EOF
 DL_DIR ?= "\${BSPDIR}/downloads/"
