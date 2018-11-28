@@ -2,6 +2,10 @@
 
 <br>
 
+## Description
+
+Yocto layer for a pico-pi-imx7 based automated telescope.
+
 ## Usage
 
 Download sources :
