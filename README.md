@@ -1,10 +1,39 @@
 # meta-autoscope
 
+This README file contains information on building the meta-autoscope layer. Please see the corresponding sections below for details.
+
 <br>
 
 ## Description
 
-Yocto layer for a pico-pi-imx7 based automated telescope.
+Yocto meta layer for automated telescope on PICO-PI-IMX7.
+
+<br>
+
+## Dependencies
+
+This layer depends on:
+
+* URI: git://git.yoctoproject.org/poky
+  * branch: master
+  * revision: HEAD
+
+* URI: git://git.openembedded.org/meta-openembedded
+  * layers: meta-oe, meta-multimedia, meta-networking, meta-python
+  * branch: master
+  * revision: HEAD
+
+* URI: https://github.com/Freescale/meta-freescale.git
+  * branch: master
+  * revision: HEAD
+
+* URI: https://github.com/Freescale/meta-freescale-3rdparty.git
+  * branch: master
+  * revision: HEAD
+
+* URI: https://github.com/jorisoffouga/meta-picopi-imx7d.git
+  * branch: master
+  * revision: HEAD
 
 <br>
 
@@ -23,5 +52,5 @@ Build image :
 
 ```
 source setup-environnement autoscope-build/ 
-bitbake base-image
+bitbake autoscope-base-image
 ```
