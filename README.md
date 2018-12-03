@@ -14,25 +14,33 @@ Yocto meta layer for automated telescope on PICO-PI-IMX7.
 
 This layer depends on:
 
-* URI: git://git.yoctoproject.org/poky
-  * branch: master
+* URI: https://git.yoctoproject.org/git/poky
+  * branch: sumo
   * revision: HEAD
 
-* URI: git://git.openembedded.org/meta-openembedded
+* URI: https://git.yoctoproject.org/git/meta-freescale
+  * branch: sumo
+  * revision: HEAD
+
+* URI: https://git.openembedded.org/meta-openembedded
   * layers: meta-oe, meta-multimedia, meta-networking, meta-python
+  * branch: sumo
+  * revision: HEAD
+
+* URI: https://github.com/Freescale/meta-freescale-3rdparty
+  * branch: sumo
+  * revision: HEAD
+
+* URI: https://github.com/Freescale/meta-freescale-distro
+  * branch: sumo
+  * revision: HEAD
+
+* URI: https://github.com/jorisoffouga/meta-picopi-imx7d
   * branch: master
   * revision: HEAD
 
-* URI: https://github.com/Freescale/meta-freescale.git
-  * branch: master
-  * revision: HEAD
-
-* URI: https://github.com/Freescale/meta-freescale-3rdparty.git
-  * branch: master
-  * revision: HEAD
-
-* URI: https://github.com/jorisoffouga/meta-picopi-imx7d.git
-  * branch: master
+* URI: https://github.com/meta-qt5/meta-qt5
+  * branch: sumo
   * revision: HEAD
 
 <br>
