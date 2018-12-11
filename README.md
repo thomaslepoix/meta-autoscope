@@ -6,7 +6,7 @@ This README file contains information on building the meta-autoscope layer. Plea
 
 ## Description
 
-Yocto meta layer for automated telescope on PICO-PI-IMX7.
+Yocto meta layer for automated telescope on Raspberry-Pi 3.
 
 <br>
 
@@ -27,16 +27,8 @@ This layer depends on:
   * branch: sumo
   * revision: HEAD
 
-* URI: https://github.com/Freescale/meta-freescale-3rdparty
+* URI: https://github.com/agherzan/meta-raspberrypi
   * branch: sumo
-  * revision: HEAD
-
-* URI: https://github.com/Freescale/meta-freescale-distro
-  * branch: sumo
-  * revision: HEAD
-
-* URI: https://github.com/jorisoffouga/meta-picopi-imx7d
-  * branch: master
   * revision: HEAD
 
 * URI: https://github.com/meta-qt5/meta-qt5
@@ -59,6 +51,6 @@ repo sync
 Build image :
 
 ```
-source setup-environnement autoscope-build/ 
+TEMPLATECONF="../meta-autoscope/conf" source sources/poky/oe-init-build-env rpi-build/ 
 bitbake autoscope-base-image
 ```

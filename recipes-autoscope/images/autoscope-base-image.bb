@@ -1,5 +1,26 @@
 SUMMARY = "Linux image"
+DESCRIPTION = "Autoscope base OS"
+LICENCE = "GPL"
+#inherit autoscope
 
-DESCRIPTION = "Include base image settings"
+include recipes-core/images/rpi-basic-image.bb
 
-inherit autoscope
+inherit extrausers
+EXTRA_USERS_PARAMS = "\
+	usermod -P autoscope root; "
+
+CONNECTIVITY = " \
+	linux-firmware \
+	i2c-tools \
+	python-smbus \
+	bridge-utils \
+	hostapd \
+	iptables \
+	wpa-supplicant \
+"
+
+DISTRO_FEATURES += "wifi"
+MACHINE_FEATURES += "wifi"
+IMAGE_INSTALL += " \
+	${CONNECTIVITY} \
+"

@@ -1,0 +1,13 @@
+================================================================================
+
+                                AUTOSCOPE
+
+================================================================================
+
+### Shell environment set up for builds. ###
+
+You can now run 'bitbake <target>'
+
+Common targets are:
+	autoscope-base-image
+
