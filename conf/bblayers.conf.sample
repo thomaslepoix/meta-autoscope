@@ -5,14 +5,16 @@ POKY_BBLAYERS_CONF_VERSION = "2"
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
+BSPDIR := "${@os.path.abspath(os.path.dirname(d.getVar('FILE', True)) + '/../..')}"
+
 BBLAYERS ?= " \
-  ${TOPDIR}/sources/poky/meta \
-  ${TOPDIR}/sources/poky/meta-poky \
-  ${TOPDIR}/sources/poky/meta-yocto-bsp \
-  ${TOPDIR}/sources/meta-raspberrypi \
-  ${TOPDIR}/sources/meta-openembedded/meta-oe \
-  ${TOPDIR}/sources/meta-openembedded/meta-python \
-  ${TOPDIR}/sources/meta-openembedded/meta-networking \
-  ${TOPDIR}/sources/meta-qt5 \
-  ${TOPDIR}/sources/meta-autoscope \
+  ${BSPDIR}/sources/poky/meta \
+  ${BSPDIR}/sources/poky/meta-poky \
+  ${BSPDIR}/sources/poky/meta-yocto-bsp \
+  ${BSPDIR}/sources/meta-raspberrypi \
+  ${BSPDIR}/sources/meta-openembedded/meta-oe \
+  ${BSPDIR}/sources/meta-openembedded/meta-python \
+  ${BSPDIR}/sources/meta-openembedded/meta-networking \
+  ${BSPDIR}/sources/meta-qt5 \
+  ${BSPDIR}/sources/meta-autoscope \
   "
