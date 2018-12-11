@@ -48,15 +48,17 @@ repo init -u https://github.com/thomaslepoix/meta-autoscope -b rpi-repo
 repo sync
 ```
 
+
+Work on this repository :
+
+```
+cd sources/meta-autoscope
+git checkout rpi
+```
+
 Build image :
 
 ```
 TEMPLATECONF="../meta-autoscope/conf" source sources/poky/oe-init-build-env rpi-build/ 
 bitbake autoscope-base-image
-```
-
-Work on this repository :
-
-```
-git checkout rpi
 ```
