@@ -16,7 +16,7 @@
   <project remote="agherzan" revision="sumo" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
   
   <!-- Autoscope -->
-  <project remote="thomaslepoix" revision="master" name="meta-autoscope" path="sources/meta-autoscope">
+  <project remote="thomaslepoix" revision="rpi" name="meta-autoscope" path="sources/meta-autoscope">
     <linkfile dest="setup-environnement" src="scripts/setup-environnement.sh"/>
   </project>
   <!-- Qt5 -->
