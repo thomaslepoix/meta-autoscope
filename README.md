@@ -44,7 +44,7 @@ Download sources :
 ```
 mkdir yocto-autoscope
 cd yocto-autoscope
-repo init -u https://github.com/thomaslepoix/meta-autoscope -b repo
+repo init -u https://github.com/thomaslepoix/meta-autoscope -b rpi-repo
 repo sync
 ```
 
