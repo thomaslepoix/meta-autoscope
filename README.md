@@ -54,3 +54,9 @@ Build image :
 TEMPLATECONF="../meta-autoscope/conf" source sources/poky/oe-init-build-env rpi-build/ 
 bitbake autoscope-base-image
 ```
+
+Work on this repository :
+
+```
+git checkout rpi
+```
