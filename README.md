@@ -6,7 +6,7 @@ This README file contains information on building the meta-autoscope layer. Plea
 
 ## Description
 
-Yocto meta layer for automated telescope on Raspberry-Pi 3.
+Yocto layer for automated telescope based on Raspberry-Pi 3.
 
 <br>
 
