@@ -3,7 +3,7 @@ DESCRIPTION = "Autoscope base OS"
 LICENCE = "GPL"
 #inherit autoscope
 
-include recipes-core/images/rpi-basic-image.bb
+include recipes-core/images/core-image-minimal.bb
 
 inherit extrausers
 EXTRA_USERS_PARAMS = "\
