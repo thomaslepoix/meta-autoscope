@@ -17,13 +17,10 @@ This layer depends on:
 * URI: https://git.yoctoproject.org/git/poky
   * branch: sumo
   * revision: HEAD
-
-* URI: https://git.yoctoproject.org/git/meta-freescale
-  * branch: sumo
   * revision: HEAD
 
 * URI: https://git.openembedded.org/meta-openembedded
-  * layers: meta-oe, meta-multimedia, meta-networking, meta-python
+  * layers: meta-oe, meta-networking, meta-python
   * branch: sumo
   * revision: HEAD
 
