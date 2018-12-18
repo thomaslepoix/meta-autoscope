@@ -24,3 +24,5 @@ MACHINE_FEATURES += "wifi"
 IMAGE_INSTALL += " \
 	${CONNECTIVITY} \
 "
+
+INSTALL_append += " rpi-config"
