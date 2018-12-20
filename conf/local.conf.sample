@@ -11,10 +11,17 @@ BB_DISKMON_DIRS = "\
     ABORT,${SSTATE_DIR},100M,1K \
     ABORT,/tmp,10M,1K"
 
-VIDEO_CAMERA = "1"
-
 CONF_VERSION = "1"
 
 BB_NUMBER_THREADS ?= "8"
 PARALLEL_MAKE ?= "-j 4"
 PATCHRESOLVE = "noop"
+
+#LICENSE_FLAGS_WHITELIST = "commercial"
+#IMAGE_INSTALL_append = "omxplayer"
+
+#raspberry pi config
+BOOT_DELAY = "0"
+RPI_USE_U_BOOT = "1"
+VIDEO_CAMERA = "1"
+GPU_MEM = "128"
