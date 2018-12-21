@@ -46,7 +46,6 @@ Download sources :
     repo sync
 ```
 
-
 Work on this repository :
 
 ```
@@ -61,5 +60,7 @@ Build image :
 ~/yocto-autoscope/ $
     TEMPLATECONF="../meta-autoscope/conf"
     source sources/poky/oe-init-build-env rpi-build/ 
-    bitbake autoscope-base-image
+    bitbake autoscope-console-image
 ```
+
+
