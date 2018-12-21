@@ -9,5 +9,5 @@
 You can now run 'bitbake <target>'
 
 Common targets are:
-	autoscope-base-image
+	autoscope-console-image
 
