@@ -31,10 +31,23 @@ CAMERA = " \
 	userland \
 "
 
+HOTSPOT = " \
+	iptables \
+	connman \
+	connman-client \
+	connman-conf \
+"
+
 #DISTRO_FEATURES += "wifi"
 #MACHINE_FEATURES += "wifi"
 
 IMAGE_INSTALL += " \
-	${CONNECTIVITY} \
+	${HOTSPOT} \
 	${CAMERA} \
 "
+
+hotspot() {
+	echo 'net.ipv4.ip_forward = 1' >> ${IMAGE_ROOTFS}/etc/sysctl.conf
+}
+
+ROOTFS_POSTPROCESS_COMMAND += " hotspot; "

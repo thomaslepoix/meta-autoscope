@@ -1,0 +1,16 @@
+[global]
+OfflineMode=false
+
+[WiFi]
+Enable=true
+Tethering=true
+Tethering.Identifier=Autoscope
+Tethering.Passphrase=123456789
+
+[Wired]
+Enable=true
+Tethering=false
+
+[P2P]
+Enable=false
+Tethering=false
