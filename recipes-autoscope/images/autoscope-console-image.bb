@@ -59,6 +59,7 @@ IMAGE_INSTALL += " \
 	${CAMERA} \
 	${FTP} \
 	${HOTSPOT} \
+	hello-mod \
 "
 
 hotspot() {
