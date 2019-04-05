@@ -4,7 +4,7 @@
 
 Yocto layer for an automated telescope based on Raspberry-Pi 3.
 
-More informations about this project on the main repository [https://github.com/thibaudledo/Autoscope]
+More informations about this project on the main repository https://github.com/thibaudledo/Autoscope
 
 <br>
 
