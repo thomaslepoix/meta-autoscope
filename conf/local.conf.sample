@@ -1,5 +1,5 @@
 MACHINE ?= "raspberrypi3"
-DISTRO ?= "poky"
+DISTRO ?= "autoscope"
 
 BB_DISKMON_DIRS = "\
     STOPTASKS,${TMPDIR},1G,100K \
