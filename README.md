@@ -1,34 +1,10 @@
 # meta-autoscope
 
-## Description
-
 Yocto layer for an automated telescope based on Raspberry-Pi 3.
 
-More informations about this project on the main repository : https://github.com/thibaudledo/Autoscope
+More informations about this project on the main repository :
 
-<br>
-
-## Dependencies
-
-This layer depends on:
-
-* URI: https://git.yoctoproject.org/git/poky
-  * branch: sumo
-  * revision: HEAD
-  * revision: HEAD
-
-* URI: https://git.openembedded.org/meta-openembedded
-  * layers: meta-oe, meta-networking, meta-python
-  * branch: sumo
-  * revision: HEAD
-
-* URI: https://github.com/agherzan/meta-raspberrypi
-  * branch: sumo
-  * revision: HEAD
-
-* URI: https://github.com/meta-qt5/meta-qt5
-  * branch: sumo
-  * revision: HEAD
+- https://github.com/thibaudledo/Autoscope
 
 <br>
 
@@ -61,4 +37,27 @@ Build image :
     bitbake autoscope-console-image
 ```
 
+<br>
+
+## Dependencies
+
+This layer depends on:
+
+* URI: https://git.yoctoproject.org/git/poky
+  * branch: sumo
+  * revision: HEAD
+  * revision: HEAD
+
+* URI: https://git.openembedded.org/meta-openembedded
+  * layers: meta-oe, meta-networking, meta-python
+  * branch: sumo
+  * revision: HEAD
+
+* URI: https://github.com/agherzan/meta-raspberrypi
+  * branch: sumo
+  * revision: HEAD
+
+* URI: https://github.com/meta-qt5/meta-qt5
+  * branch: sumo
+  * revision: HEAD
 
