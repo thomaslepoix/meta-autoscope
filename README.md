@@ -40,8 +40,8 @@ Build image :
 Deploy image : 
 ```
 ~/yocto-autoscope/rpi-build/tmp/deploy/images/raspberrypi3/ $
-	umount /dev/mmcblk0*
-	sudo dd if="autoscope-console-image-raspberrypi3.rpi-sdimg" of="/dev/mmcblk0" status=progress
+    umount /dev/mmcblk0*
+    sudo dd if="autoscope-console-image-raspberrypi3.rpi-sdimg" of="/dev/mmcblk0" status=progress
 ```
 
 <br>
