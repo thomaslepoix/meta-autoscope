@@ -52,15 +52,21 @@ CAMERA = " \
 	userland \
 "
 
-#DISTRO_FEATURES += "wifi"
-#MACHINE_FEATURES += "wifi"
-
+#	a4988-mod
 IMAGE_INSTALL += " \
 	${CAMERA} \
 	${FTP} \
 	${HOTSPOT} \
 	hello-mod \
+	i2c-tools \
 "
+
+#DISTRO_FEATURES += "wifi"
+#MACHINE_FEATURES += "wifi"
+#IMAGE_INSTALL_remove = " \
+#	bluetooth \
+#	bluez \
+#"
 
 hotspot() {
 	echo 'net.ipv4.ip_forward = 1' >> ${IMAGE_ROOTFS}/etc/sysctl.conf
