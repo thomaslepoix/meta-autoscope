@@ -20,14 +20,6 @@ Download sources :
     repo sync
 ```
 
-Work on this repository :
-
-```
-~/yocto-autoscope/ $
-    cd sources/meta-autoscope
-    git checkout rpi
-```
-
 Build image :
 
 ```
@@ -42,6 +34,35 @@ Deploy image :
 ~/yocto-autoscope/rpi-build/tmp/deploy/images/raspberrypi3/ $
     umount /dev/mmcblk0*
     sudo dd if="autoscope-console-image-raspberrypi3.rpi-sdimg" of="/dev/mmcblk0" status=progress
+```
+
+Work on this repository :
+
+```
+~/yocto-autoscope/ $
+    cd sources/meta-autoscope
+    git checkout rpi
+```
+
+Work on a driver (example hello-mod) :
+```
+~/yocto-autoscope/ $
+    cd sources/meta-autoscope/recipes-test/hello-mod
+    git clone https://github.com/thibaudledo/Autoscope -b hello_mod files
+
+#IN meta-autoscope/recipes-test/hello-mod/hello-mod_git.bb
+    #COMMENT
+        SRC_URI = "git://github.com/thibaudledo/Autoscope;protocol=git;branch=hello_mod"
+    #UNCOMMENT
+        SRC_URI = "file://Makefile \
+                   file://hello.c \
+                   file://COPYING \
+                  "
+
+#IN meta-autoscope/recipes-autoscope/images/autoscope-console-image.bb
+    IMAGE_INSTALL = " \
+        hello-mod \
+    "
 ```
 
 <br>
