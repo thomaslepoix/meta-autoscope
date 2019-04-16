@@ -12,3 +12,5 @@ do_patch_prepend() {
 }
 
 KERNEL_MODULE_AUTOLOAD_append = " ip_tables"
+
+CMDLINE_append = "quiet console=tty2"
