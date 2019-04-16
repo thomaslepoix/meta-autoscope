@@ -45,7 +45,7 @@ Work on this repository :
 ```
 
 Work on a driver (example hello-mod) :
-```
+```bash
 ~/yocto-autoscope/ $
     cd sources/meta-autoscope/recipes-test/hello-mod
     git clone https://github.com/thibaudledo/Autoscope -b hello_mod files
