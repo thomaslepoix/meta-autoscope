@@ -6,7 +6,7 @@
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/agherzan" name="agherzan"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://github.com/meta-qt5" name="qt5"/>
+  <!-- <remote fetch="https://github.com/meta-qt5" name="qt5"/> -->
   <remote fetch="https://github.com/thomaslepoix" name="thomaslepoix"/>
   
   <project remote="yocto" revision="sumo" name="poky" path="sources/poky"/>
@@ -17,10 +17,10 @@
   
   <!-- Autoscope -->
   <project remote="thomaslepoix" revision="rpi" name="meta-autoscope" path="sources/meta-autoscope">
-    <linkfile dest="setup-environnement" src="scripts/setup-environnement.sh"/>
+    <!-- <linkfile dest="setup-environnement" src="scripts/setup-environnement.sh"/> -->
   </project>
   <!-- Qt5 -->
-  <project remote="qt5" revision="sumo" name="meta-qt5" path="sources/meta-qt5"/>
+  <!-- <project remote="qt5" revision="sumo" name="meta-qt5" path="sources/meta-qt5"/> -->
 
 </manifest>
 
