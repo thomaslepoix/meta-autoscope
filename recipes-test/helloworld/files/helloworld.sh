@@ -41,8 +41,8 @@
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
-DESC="helloworld"
-NAME="helloworld-test"
+DESC="helloworld-test"
+NAME="helloworld"
 DAEMON=/usr/bin/$NAME
 DAEMON_ARGS=""
 PIDFILE=/var/run/$NAME.pid
