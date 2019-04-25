@@ -22,14 +22,14 @@ do_install () {
 	      -e 's,/var,${localstatedir},g' \
 	      -e 's,/usr/bin,${bindir},g' \
 	      -e 's,/usr,${prefix},g' > ${D}${sysconfdir}/init.d/helloworld
-	chmod a+x ${D}${sysconfdir}/init.d/helloworld
+	chmod 0755 ${D}${sysconfdir}/init.d/helloworld
 
 	install -d ${D}${bindir}
 	install -m 0755 ${WORKDIR}/helloworld ${D}${bindir}/
 }
 
-RDEPENDS_${PN} = "initscripts"
-CONFFILES_${PN} += "${sysconfdir}/init.d/helloworld"
+#RDEPENDS_${PN} = "initscripts"
+#CONFFILES_${PN} += "${sysconfdir}/init.d/helloworld"
 
 INITSCRIPT_NAME = "helloworld"
-INITSCRIPT_PARAMS = "start 99 2 3 4 5 . stop 00 0 1 6 ."
+INITSCRIPT_PARAMS = "start 99 5 . stop 00 0 1 6 ."
