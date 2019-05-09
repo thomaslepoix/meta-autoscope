@@ -24,7 +24,7 @@ case "$1" in
 	stop)
 		echo -n "Stopping ${DESC}: ${NAME}... "
 		start-stop-daemon -K -q -x ${DAEMON}
-		rm ${PIDFILE}
+		rm -f ${PIDFILE}
 		echo "done"
 		;;
 	restart)
