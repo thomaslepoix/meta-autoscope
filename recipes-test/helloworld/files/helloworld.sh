@@ -11,17 +11,20 @@
 NAME="helloworld"
 DESC="Test program"
 DAEMON="/usr/bin/${NAME}"
+PIDFILE="/var/run/${NAME}.pid"
 
 case "$1" in
 	start)
 		echo -n "Starting ${DESC}: ${NAME}... "
 #		start-stop-daemon -S -b -C -q -x ${DAEMON} > /dev/tty3
 		${DAEMON} > /dev/tty3 &
+		echo $! > ${PIDFILE}
 		echo "done"
 		;;
 	stop)
 		echo -n "Stopping ${DESC}: ${NAME}... "
 		start-stop-daemon -K -q -x ${DAEMON}
+		rm ${PIDFILE}
 		echo "done"
 		;;
 	restart)
