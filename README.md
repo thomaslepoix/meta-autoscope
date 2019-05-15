@@ -10,7 +10,7 @@ More informations about this project on the main repository :
 
 ## Usage
 
-Install dependancies :
+Install dependencies :
 
 ```
 ~ $
