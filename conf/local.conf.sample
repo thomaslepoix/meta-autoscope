@@ -22,4 +22,5 @@ PATCHRESOLVE = "noop"
 
 #RPI_USE_U_BOOT = "1"
 
+#overvide machine/raspberrypi3.conf
 SERIAL_CONSOLE = ""
