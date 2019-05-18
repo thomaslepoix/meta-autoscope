@@ -20,5 +20,6 @@ PATCHRESOLVE = "noop"
 #LICENSE_FLAGS_WHITELIST = "commercial"
 #IMAGE_INSTALL_append = "omxplayer"
 
-RPI_USE_U_BOOT = "1"
+#RPI_USE_U_BOOT = "1"
 
+SERIAL_CONSOLE = ""
