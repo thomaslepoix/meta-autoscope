@@ -1,0 +1,55 @@
+From 56ba96e3489ab0df289ba5afb97371344dd41cd7 Mon Sep 17 00:00:00 2001
+From: "tlepoix@localhost" <thomas.lepoix@gmail.com>
+Date: Mon, 29 Apr 2019 00:01:49 +0200
+Subject: [PATCH] Skip rpi platform check
+
+---
+ setup.py | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index a0ee109..8dbf049 100644
+--- a/setup.py
++++ b/setup.py
+@@ -95,22 +95,22 @@ __entry_points__ = {
+ class CustomInstallCommand(install):
+     def run(self):
+         # Make sure we're installing on a Raspberry Pi
+-        on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+-        if not on_rtd:
+-            try:
+-                with io.open('/proc/cpuinfo', 'r') as cpuinfo:
+-                    found = False
+-                    for line in cpuinfo:
+-                        if line.startswith('Hardware'):
+-                            found = True
+-                            label, value = line.strip().split(':', 1)
+-                            value = value.strip()
+-                            if value not in ('BCM2708', 'BCM2709', 'BCM2835', 'BCM2836'):
+-                                raise ValueError('This system does not appear to be a Raspberry Pi')
+-                    if not found:
+-                        raise ValueError('Unable to determine if this system is a Raspberry Pi')
+-            except IOError:
+-                raise ValueError('Unable to open /proc/cpuinfo')
++#        on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
++#        if not on_rtd:
++#            try:
++#                with io.open('/proc/cpuinfo', 'r') as cpuinfo:
++#                    found = False
++#                    for line in cpuinfo:
++#                        if line.startswith('Hardware'):
++#                            found = True
++#                            label, value = line.strip().split(':', 1)
++#                            value = value.strip()
++#                            if value not in ('BCM2708', 'BCM2709', 'BCM2835', 'BCM2836'):
++#                                raise ValueError('This system does not appear to be a Raspberry Pi')
++#                    if not found:
++#                        raise ValueError('Unable to determine if this system is a Raspberry Pi')
++#            except IOError:
++#                raise ValueError('Unable to open /proc/cpuinfo')
+         install.run(self)
+ 
+ 
+-- 
+2.17.1
+
