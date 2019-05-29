@@ -1,0 +1,33 @@
+From a3cb01e78ad60843e8eb56783ff904912344340a Mon Sep 17 00:00:00 2001
+From: "tlepoix@localhost" <thomas.lepoix@gmail.com>
+Date: Tue, 23 Apr 2019 16:19:30 +0200
+Subject: [PATCH] Invensense mpu9250 dt support
+
+---
+ arch/arm/boot/dts/bcm2710-rpi-3-b.dts | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/boot/dts/bcm2710-rpi-3-b.dts b/arch/arm/boot/dts/bcm2710-rpi-3-b.dts
+index 37aed344cbbf..259267062a80 100644
+--- a/arch/arm/boot/dts/bcm2710-rpi-3-b.dts
++++ b/arch/arm/boot/dts/bcm2710-rpi-3-b.dts
+@@ -144,7 +144,15 @@
+ &i2c1 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&i2c1_pins>;
+-	clock-frequency = <100000>;
++	clock-frequency = <10000>;
++	status = "okay";
++
++	mpu9250@0x68 {
++		compatible = "invensense,mpu9250-i2c";
++		reg = <0x68>;
++		#address_cells = <1>;
++		#size-cells = <0>;
++	};
+ };
+ 
+ &i2c2 {
+-- 
+2.17.1
+
