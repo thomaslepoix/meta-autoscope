@@ -17,7 +17,7 @@ case "$1" in
 	start)
 		echo -n "Starting ${DESC}: ${NAME}... "
 #		start-stop-daemon -S -b -C -q -x ${DAEMON} > /dev/tty3
-		${DAEMON} > /dev/tty3 &
+		${DAEMON} > /dev/tty4 &
 		echo $! > ${PIDFILE}
 		echo "done"
 		;;
