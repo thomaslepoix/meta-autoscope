@@ -1,0 +1,41 @@
+From 470992096dbd43eb5527c1d005295abf362f0bc8 Mon Sep 17 00:00:00 2001
+From: "tlepoix@localhost" <thomas.lepoix@gmail.com>
+Date: Sun, 5 May 2019 03:13:21 +0200
+Subject: [PATCH] Make pi3-disable-bt-overlay uboot compatible
+
+---
+ arch/arm/boot/dts/overlays/pi3-disable-bt-overlay.dts | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/boot/dts/overlays/pi3-disable-bt-overlay.dts b/arch/arm/boot/dts/overlays/pi3-disable-bt-overlay.dts
+index 87cf345f9641..1c16aca3cb27 100644
+--- a/arch/arm/boot/dts/overlays/pi3-disable-bt-overlay.dts
++++ b/arch/arm/boot/dts/overlays/pi3-disable-bt-overlay.dts
+@@ -28,6 +28,15 @@
+ 	};
+ 
+ 	fragment@2 {
++		target = <&uart0_pins>;
++		__overlay__ {
++			brcm,pins = <14 15>;
++			brcm,function = <4> /* alt0: UART0 TX/ UART0 RX*/;
++			brcm,pull;
++		};
++	};
++
++	fragment@3 {
+ 		target = <&uart0_pins>;
+ 		__overlay__ {
+ 			brcm,pins;
+@@ -36,7 +45,7 @@
+ 		};
+ 	};
+ 
+-	fragment@3 {
++	fragment@4 {
+ 		target-path = "/aliases";
+ 		__overlay__ {
+ 			serial0 = "/soc/serial@7e201000";
+-- 
+2.17.1
+
