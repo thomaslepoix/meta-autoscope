@@ -17,5 +17,6 @@ S = "${WORKDIR}/git"
 
 # The inherit of module.bbclass will automatically name module packages with
 # "kernel-module-" prefix as required by the oe-core build environment.
-
 RPROVIDES_${PN} += "kernel-module-a4988"
+
+KERNEL_MODULE_AUTOLOAD_append = "a4988"
